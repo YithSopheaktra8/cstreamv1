@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<!-- google font roboto-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+		<!-- google font electrolize -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+			rel="stylesheet" />
+		<!-- flowbite link -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+			rel="stylesheet" />
+		<!-- tailwind script -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- css link	 -->
+		<link rel="stylesheet" href="/css/style.css" />
+		<!-- link tabbar icons -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/images/no-bg-logo.png"
+			width />
+		<title>CSTREAM</title>
+	</head>
+	<body>
+		<header>
+			<!-- background image start -->
+			<section class="bg-image-config h-screen" id="background-image"></section>
+			<!-- background image end -->
+			<section class="bg-shadow"></section>
+
+			<!-- navbar start -->
+			<nav class="bg-transparent px-3 w-[430px] top-0 fixed start-0 z-50 xl:px-11 xl:w-full">
+				<div class="flex items-center justify-between">
+					<a href="/index.html">
+						<img src="../images/no-bg-logo.png" class="w-[150px] h-[140px]" alt="Flowbite Logo" />
+					</a>
+					<div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+						<!-- search -->
+						<input
+							onkeyup="findMovie()"
+							id="input-search"
+							type="text"
+							class="bg-white absolute right-[100px] rounded-full text-black placeholder:border-non xl:right-[220px]" />
+						<button id="search-btn">
+							<i class="fa-solid fa-magnifying-glass xl:mr-8"></i>
+						</button>
+						<!-- search movie list -->
+						<div class="absolute top-[95px] right-[220px] hidden z-50" id="search_list">
+							<ul
+								class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg overflow-y-auto max-h-[300px]" id="search_card_list">
+								<!-- render from js -->
+							</ul>
+						</div>
+						<a href="login.html">
+							<button class="button-color font-normal uppercase">
+								sign in
+							</button>
+						</a>
+						<button data-collapse-toggle="navbar-cta" type="button"
+							class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+							aria-controls="navbar-cta" aria-expanded="false">
+							<span class="sr-only">Open main menu</span>
+							<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+								viewBox="0 0 17 14">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M1 1h15M1 7h15M1 13h15" />
+							</svg>
+						</button>
+					</div>
+					<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+						<ul
+							class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+							<li>
+								<a href="/index.html" class="block py-2 px-3 md:p-0 text-white fs-17 uppercase"
+									aria-current="page">Home</a>
+							</li>
+							<span class="font-thin">|</span>
+							<li>
+								<a href="movie_page.html"
+									class="block py-2 px-3 md:p-0 text-white fs-17 uppercase">Movie</a>
+							</li>
+							<span class="font-thin">|</span>
+							<li>
+								<a href="tv-show-list.html" class="block py-2 px-3 md:p-0 text-white fs-17 uppercase">TV Show</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</nav>
+			<!-- navbar end -->
+
+			<!-- content header start -->
+			<section class="absolute top-[450px] w-full" id="header-detail">
+				<!-- render from js -->
+			</section>
+			<!-- content header end -->
+		</header>
+
+		<!-- main start -->
+		<main>
+			
+			<!-- episdoe title -->
+			<section class="flex justify-between px-11 mt-5">
+				<p class="text-[20px]">Episode 1- 9</p>
+				<div>
+					<button
+						id="dropdownDefaultButton"
+						data-dropdown-toggle="dropdown"
+						class="text-white button-color w-[160px] h-[46px] rounded-[50px] text-[20px] px-5 py-2.5 text-center inline-flex items-center">
+						Season 1
+						<svg
+							class="w-22 h-2.5 ms-3"
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 10 6">
+							<path
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="m1 1 4 4 4-4" />
+						</svg>
+					</button>
+
+					<!-- Dropdown menu -->
+					<div
+						id="dropdown"
+						class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+						<ul
+							class="py-2 text-sm text-gray-700 dark:text-gray-200"
+							aria-labelledby="dropdownDefaultButton">
+							<li>
+								<a
+									href="#"
+									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+									>Season 1</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+									>Season 2</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+									>Season 3</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+									>Season 5</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="px-11 flex justify-between mt-5" id="episode-container">
+				<div class="episode-card relative">
+					<a href="/pages/video_player.html">
+						<img src="/images/trending-img-4.png" alt="#" class="episode-img">
+					</a>
+				</div>
+				<div class="episode-card relative">
+					<a href="/pages/video_player.html">
+						<img src="/images/trending-m-5.png" alt="#" class="episode-img">
+					</a>
+				</div>
+				<div class="episode-card relative">
+					<a href="/pages/video_player.html">
+						<img src="/images/upcoming-1.png" alt="#" class="episode-img">
+					</a>
+				</div>
+				<div class="episode-card relative">
+					<a href="/pages/video_player.html">
+						<img src="/images/popular-img-1.png" alt="#" class="episode-img">
+					</a>
+				</div>
+				<div class="episode-card relative">
+					<a href="/pages/video_player.html">
+						<img src="/images/upcoming-1.png" alt="#" class="episode-img">
+					</a>
+				</div>
+				<!-- render from just -->
+			</section>
+
+			<section class="px-11 fs-36 mt-[100px]">
+				<h2>Trending TV Show</h2>
+			</section>
+			<section class="relative">
+				<!-- background image -->
+				<div class="bg-image-config background-image-2"></div>
+				<!-- background shadow -->
+				<div class="bg-shadow"></div>
+				<!-- trending start -->
+				<div class="px-11 absolute top-[50px] w-full">
+					<!-- trending card -->
+					<div class="w-full grid grid-cols-7 grid-row-2 gap-12 gap-y-[200px]" id="trending_tv">
+						<!-- render from js -->
+						
+					</div>
+				</div>
+
+			</section>
+		</main>
+		<!-- main end -->
+
+		<!-- footer start -->
+		<footer class="w-full absolute h-[250px] px-11 lg:top-[2600px]">
+			<div class="flex justify-between">
+				<!-- footer left -->
+				<div>
+					<img src="/images/footer-logo.png" alt="footer-logo" />
+					<div class="flex text-sm opacity-70 mt-5 gap-5">
+						<button>Privacy policy</button>
+						<span>-</span>
+						<button>Term of service</button>
+						<span>-</span>
+						<button>Contact</button>
+					</div>
+				</div>
+				<!-- footer right -->
+				<div class="flex flex-col justify-between">
+					<div class="flex gap-5 fs-17">
+						<button>Home</button>
+						<span>/</span>
+						<button>Discover</button>
+						<span>/</span>
+						<button>Influence</button>
+						<span>/</span>
+						<button>Release</button>
+					</div>
+					<div>
+						<div class="flex gap-10 justify-end">
+							<button>
+								<i
+									class="fa-brands fa-square-facebook fa-2xl"></i>
+							</button>
+							<button>
+								<i
+									class="fa-brands fa-square-twitter fa-2xl"></i>
+							</button>
+							<button>
+								<i class="fa-brands fa-google fa-2xl"></i>
+							</button>
+						</div>
+						<p class="text-sm opacity-70 float-right mt-5">
+							© CSTREAM 2023
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer end -->
+
+		<!-- flowbite script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+		<!-- jquery cdn -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- js script -->
+		<script src="/js/tv-show-detail.js"></script>
+		<script src="/js/index.js"></script>
+	</body>
+</html>

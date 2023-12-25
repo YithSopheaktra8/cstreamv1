@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<!-- google font roboto-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+		<!-- google font electrolize -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+			rel="stylesheet" />
+		<!-- flowbite link -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+			rel="stylesheet" />
+		<!-- tailwind script -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- css link    -->
+		<link rel="stylesheet" href="/css/style.css" />
+		<!-- link tabbar icons -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/images/no-bg-logo.png"
+			width />
+		<title>Log In</title>
+	</head>
+
+	<body>
+		<!-- main start -->
+		<main class="relative h-[100vh]">
+			<!-- logo section  -->
+			<section class="absolute top-[10px] z-50">
+				<a href="/index.html">
+					<img
+						src="/images/no-bg-logo.png"
+						class="w-[150px] h-[140px]"
+						alt="Flowbite Logo" />
+				</a>
+			</section>
+			<!-- background image start -->
+			<section
+				class="background-image-register bg-image-config-1"></section>
+			<!-- bg shadow -->
+			<section class="bg-shadow"></section>
+			<!-- background image end -->
+			<section
+				class="absolute top-[200px] px-48 flex justify-between w-full">
+				<div>
+					<p class="text-5xl leading-[50px]">
+						Sign In to Enjoy all <br />
+						your favorite <br />
+						movies
+					</p>
+					<p class="text-[14px] text-[#666666]">
+						Enjoy with your friend family make yourself happier
+					</p>
+				</div>
+				<div class="w-[500px]">
+					<div>
+						<input
+							type="text"
+							id="email"
+							class="w-full h-[60px] bg-[#545353] opacity-60 rounded-[10px] placeholder:text-[18px] placeholder:font-medium border-none"
+							placeholder="Enter Email" />
+						<input
+							type="password"
+							id="password"
+							class="w-full h-[60px] bg-[#545353] opacity-60 fs-17 rounded-[10px] placeholder:text-[18px] placeholder:font-medium border-none mt-[22px]"
+							placeholder="••••••••" />
+						<button id="hidePassword" onclick="togglePassword()">
+							<i
+								id="hideIcon"
+								class="fa-regular fa-eye-slash absolute top-[100px] right-[210px] text-[#545353]"></i>
+						</button>
+						<p class="float-right mt-[12px] text-sm text-[#C7C7C7]">
+							Forget Password ?
+						</p>
+						<a>
+							<button
+								onclick="login()"
+								class="button-color rounded-[10px] mt-[55px] w-full h-[60px] text-[18px] font-medium">
+								Sign In
+							</button>
+						</a>
+						<p class="float-left mt-[12px] text-sm text-[#C7C7C7]">
+							If you don't have account
+							<a href="register.html">
+								<span class="text-secondary"
+									>Register here</span
+								>
+							</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- main end -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+		<!-- jquery cdn -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<!-- sweet alert -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!-- js script -->
+		<script src="/js/index.js"></script>
+		<script src="/js/login.js"></script>
+	</body>
+</html>

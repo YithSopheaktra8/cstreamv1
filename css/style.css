@@ -1,0 +1,172 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	background-color: #0d0c0f;
+	color: #ffffff;
+}
+
+.bg-image-config {
+	position: relative;
+	width: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.bg-image-config-1 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-size: 100%;
+	background-position: center;
+}
+
+.text-secondary {
+	color: #00925d;
+}
+.text-shadow {
+	color: #999999;
+}
+
+.background-image {
+	background-image: url("/images/homepage-image.png");
+}
+
+.background-image-1 {
+	background-image: url("/images/content-image-1.png");
+}
+.background-image-2 {
+	background-image: url("/images/content-image-2.png");
+}
+
+.background-tv-show {
+	background-image: url("/images/bg-tv-show.png");
+}
+
+.background-image-register {
+	background-image: url("/images/content-image-2.png");
+}
+
+.bg-shadow {
+	background-image: url("/images/bg-shadow.png");
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	object-fit: cover;
+}
+.bg-text-shadow {
+	background-image: url("/images/episode-shadow.png");
+	width: 301px;
+	height: 80%;
+	top: 0px;
+}
+
+.episode-card {
+	width: 265px;
+	height: 190px;
+}
+
+.episode-img{
+	width: 100%;
+	height: 100%;
+	border-radius: 16px;
+	object-fit: cover;
+}
+
+
+
+.background-image-details {
+	background-image: url("/images/bg-detail.png");
+}
+
+.bg-image-tv-list {
+	background-image: url("/images/TV-show-list.png");
+}
+
+.fs-17 {
+	font-size: 17px;
+	font-weight: normal;
+}
+
+.fs-36 {
+	font-size: 36px;
+	font-weight: normal;
+}
+
+.fs-10 {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.button-color {
+	width: 105px;
+	height: 40px;
+	background-color: #00925d;
+	border-radius: 20px;
+	font-size: 17px;
+	font-weight: 400;
+}
+.button-season {
+	width: 160px;
+	height: 46px;
+	border-radius: 50px;
+	background: #00925d;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.fs-64 {
+	font-size: 64px;
+	font-weight: normal;
+}
+
+.title-border {
+	border: 1px solid white;
+	padding: 3px;
+	height: fit-content;
+}
+
+.up-card {
+	height: 390px;
+	width: 280px;
+}
+
+.up-card-img {
+	border-radius: 25px;
+	object-fit: cover;
+	height: 390px;
+}
+
+.detail-img {
+	border-radius: 25px;
+	object-fit: cover;
+	height: 500px;
+	width: 300px;
+}
+
+.up-card-desc p {
+	font-family: "Electrolize", sans-serif;
+}
+
+.color-gold {
+	color: gold;
+}
+
+.bg-opacity-navbar {
+	background-color: rgba(184, 184, 184, 0.156);
+}
+
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}

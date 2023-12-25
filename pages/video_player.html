@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<!-- google font roboto-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+		<!-- google font electrolize -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+			rel="stylesheet" />
+		<!-- flowbite link -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+			rel="stylesheet" />
+		<!-- tailwind script -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- css link	 -->
+		<link rel="stylesheet" href="/css/style.css" />
+		<!-- link tabbar icons -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/images/no-bg-logo.png"
+			width />
+		<!-- Plyr script -->
+		<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+		<!-- link Plyr or video player -->
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+		<title>CSTREAM</title>
+	</head>
+
+	<body>
+		<header>
+			<!-- navbar start -->
+			<nav class="bg-transparent px-3 w-[430px] top-0 fixed start-0 z-50 xl:px-11 xl:w-full">
+				<div class="flex items-center md:justify-between">
+					<a href="/index.html">
+						<img
+							src="/images/no-bg-logo.png"
+							class="w-[150px] h-[140px]"
+							alt="Flowbite Logo" />
+					</a>
+					<div
+						class="flex ml-[120px] justify-end md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+						<!-- search -->
+						<input
+							onkeyup="findMovie()"
+							id="input-search"
+							type="text"
+							class="bg-white absolute right-[80px] rounded-full top-[100px] text-black placeholder:border-non md:right-[220px] md:top-[50px]" />
+						<button id="search-btn">
+							<i class="fa-solid fa-magnifying-glass md:mr-8"></i>
+						</button>
+						<!-- search movie list -->
+						<div class="absolute  right-[80px] top-[150px]  hidden z-50 md:top-[95px] md:right-[220px] " id="search_list">
+							<ul
+								class="w-48  text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg overflow-y-auto max-h-[300px]" id="search_card_list">
+								<!-- render from js -->
+							</ul>
+						</div>
+
+						<a href="/pages/login.html" class="hidden lg:block"
+							><button class="button-color font-normal uppercase">
+								sign in
+							</button>
+						</a>
+						<button
+							data-collapse-toggle="navbar-cta"
+							type="button"
+							class="inline-flex items-center p-2  w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none"
+							aria-controls="navbar-cta"
+							aria-expanded="false">
+							<span class="sr-only">Open main menu</span>
+							<svg
+								class="w-5 h-5"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 17 14">
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M1 1h15M1 7h15M1 13h15" />
+							</svg>
+						</button>
+					</div>
+					<div
+						class="flex items-center hidden justify-center  absolute right-0 top-[80px]  md:block md:right-[80px]  md:order-1 lg:top-0 lg:right-0 lg:relative"
+						id="navbar-cta">
+						<ul
+							class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+							<li>
+								<a
+									href="index.html"
+									class="block py-2 px-3 md:p-0 text-white fs-17 uppercase"
+									aria-current="page"
+									>Home</a
+								>
+							</li>
+							<span class="hidden font-thin xl:block">|</span>
+							<li>
+								<a
+									href="/pages/movie_page.html"
+									class="block py-2 px-3 md:p-0 text-white fs-17 uppercase"
+									>Movie</a
+								>
+							</li>
+							<span class="hidden font-thin xl:block">|</span>
+							<li>
+								<a
+									href="pages/tv-show-list.html"
+									class="block py-2 px-3 md:p-0 text-white fs-17 uppercase"
+									>TV Show</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- navbar end -->
+
+			<!-- content header start -->
+			<section class="px-11  relative top-[150px] w-full h-auto" id="video-detail">
+
+				<!-- Render from js -->
+				
+			</section>
+
+			<!-- content header end -->
+		</header>
+
+		<!-- main start -->
+		<main class="relative">
+				<!-- background image -->
+				<section class="h-screen bg-cover hidden md:hidden lg:block lg:bg-[url('/images/content-image-1.png')]"></section>
+			<!-- background shadow -->
+			<section class="bg-shadow"></section>
+			<!-- also like movies start-->
+			<section class="px-11 absolute top-[250px] w-full md:top-0">
+				<!-- also like title -->
+				<p class="fs-36 font-light">You May Also Like</p>
+				<!-- also like card -->
+				<div class="w-full grid grid-cols-6 grid-row-2 gap-x-[250px] overflow-x-auto md:gap-12" id="also-like">
+					<!-- render from js -->
+					
+				</div>
+			</section>
+			<!-- popular movies end -->
+		</main>
+		<!-- main end -->
+
+		<!-- footer start -->
+		<footer
+			class="w-full h-[300px] absolute mt-[1450px] px-11 md:h-[300px] md:top-[2600px] lg:mt-[450px] lg:h-[300px]">
+			<div class="flex justify-between flex-col gap-[30px] lg:flex-row">
+				<!-- footer left -->
+				<div>
+					<a href="index.html"
+						><img src="/images/footer-logo.png" alt="footer-logo"
+					/></a>
+					<div class="flex text-sm opacity-70 mt-5 gap-5">
+						<button>Privacy policy</button>
+						<span>-</span>
+						<button>Term of service</button>
+						<span>-</span>
+						<button>Contact</button>
+					</div>
+				</div>
+				<!-- footer right -->
+				<div class="flex flex-col justify-between">
+					<div class="flex gap-5 fs-17 hidden lg:block">
+						<button>Home</button>
+						<span>/</span>
+						<button>Discover</button>
+						<span>/</span>
+						<button>Influence</button>
+						<span>/</span>
+						<button>Release</button>
+					</div>
+					<div class="hidden lg:block">
+						<div class="flex gap-10 justify-end">
+							<button>
+								<i
+									class="fa-brands fa-square-facebook fa-2xl"></i>
+							</button>
+							<button>
+								<i
+									class="fa-brands fa-square-twitter fa-2xl"></i>
+							</button>
+							<button>
+								<i class="fa-brands fa-google fa-2xl"></i>
+							</button>
+						</div>
+						<p class="text-sm opacity-70 float-right mt-5">
+							© CSTREAM 2023
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer end -->
+
+		<!-- flowbite script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+		<!-- jquery cdn -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- js script -->
+		<script src="/js/index.js"></script>
+		<script src="/js/video.js"></script>
+	</body>
+</html>
